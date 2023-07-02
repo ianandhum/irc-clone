@@ -1,0 +1,3 @@
+[submodule "client/public/zomoj"]
+	path = client/public/zomoji
+	url = https://github.com/zoho/zomoji-web-library

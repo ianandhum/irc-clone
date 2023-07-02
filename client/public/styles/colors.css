@@ -1,0 +1,20 @@
+ :root {
+  --background: #111;
+  --background-secondary: #1111;
+  --scrollbar-color: #9993;
+  
+  --modal-shadow:  rgba(30, 52, 82, 0.2);
+  --modal-border: rgba(255,255,255,0.1);
+  --filter-shadow-color: #29b9a5;
+  
+  --message-received-bg: rgba(101, 144, 177, 0.5);
+  --message-received-fg: #fff;
+
+  --message-sent-bg: rgba(107, 171, 175, 0.5);
+  --message-sent-fg: var(--message-received-fg);
+
+  --message-bar-fg: #fff;
+  --message-bar-focus-bg: rgba(255,255,255, 0.05);
+
+  --tab-active-color:  rgb(35, 170, 118);
+}

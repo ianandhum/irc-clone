@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/colors.css"/>
+    <link rel="stylesheet" href="styles/chat-bar.css"/>
+    <link rel="stylesheet" href="styles/users-pane.css"/>
+
+    <!-- zomoji support -->
+    <link rel="stylesheet" href="zomoji/css/fun/zomoji24.css">
+    <link rel="stylesheet" href="zomoji/css/fun/zomoji48.css">
+    <link rel="stylesheet" href="zomoji/css/fun/zomoji72.css">
+    <link rel="stylesheet" href="zomoji/css/workplace/zomoji24.css">
+    <link rel="stylesheet" href="zomoji/css/workplace/zomoji48.css">
+    <link rel="stylesheet" href="zomoji/css/workplace/zomoji72.css">
+    <link rel="stylesheet" href="zomoji/css/live/zomoji24.css">
+    <link rel="stylesheet" href="zomoji/css/live/zomoji48.css">
+    <link rel="stylesheet" href="zomoji/css/live/zomoji72.css">
+    <link rel="stylesheet" href="zomoji/css/live/zomoji24-retina.css">
+
+    <!-- Zomoji library has read xss problems :( -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.1/purify.min.js" integrity="sha512-uHOKtSfJWScGmyyFr2O2+efpDx2nhwHU2v7MVeptzZoiC7bdF6Ny/CmZhN2AwIK1oCFiVQQ5DA/L9FSzyPNu6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="zomoji/js/zomoji.js"></script>
+
+    <style>
+        * , ::after, ::before {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background-color: #111;
+            color: #fff;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        main.container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 900px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="container" id="container">
+        <section class="users-pane">
+            <h3 class="header">Users</h3>
+            <ul class="users-tab">
+                <li class="user-tab-item">See all (god mode)</li>
+                <li class="user-tab-item active">Broadcast</li>>
+            </ul>
+            </div>
+        </section>
+        <section class="chat-window">
+            <article class="messages-list" id="messages"></article>
+            <form class="message-bar" onsubmit="event.preventDefault();processInput();">
+                <input autocomplete="off" placeholder="Type something here..." type="text" id="txt-compose"/>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"
+        integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous">
+    </script>
+    <script src="scripts/state.js" >
+    </script>
+    <script src="scripts/filters.js" >
+    </script>
+    <script src="scripts/messaging.js" >
+    </script>
+</body>
+</html>
